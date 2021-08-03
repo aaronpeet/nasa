@@ -5,6 +5,9 @@
     <img class="img-fluid mt-2" alt="Vue logo" src="https://images.unsplash.com/photo-1536697246787-1f7ae568d89a?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fG5hc2F8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"><h1>NASA</h1>
       </div>
       <div class="col-md-8">
+          <PictureChange/>
+      </div>
+      <div class="col-md-8">
         <PicturesCurrent/>
       </div>
     </div>
@@ -15,6 +18,7 @@
 <script>
 import {  reactive } from 'vue';
 import PicturesCurrent from '../components/PicturesCurrent.vue'
+import PictureChange from '../components/PictureChange.vue'
 export default {
   name: 'HomePage',
   setup(){
@@ -22,7 +26,7 @@ const state = reactive({
 })
     return { state }
   },
-  components: {PicturesCurrent}
+  components: {PicturesCurrent, PictureChange}
 };
 </script>
 
